@@ -1,0 +1,153 @@
+/* Estilo em CSS da página*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-image: url('image/fotopage.png'); /* Imagem de fundo da página */
+    height: 100vh; /* 100% da altura da viewport */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Fixa o plano de fundo */
+    font-size: 17px; /* Tamanho das letras página*/  
+    padding-top: 30px; /* Ajuste de tamanho cabeçalho verde escuro*/        
+}
+/* Ajustes posição texto da página*/
+section {
+    padding: 20px;/* Largura texto */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+/* Cabeçalho da página*/
+header {
+    background-color: #062a01;
+    color: whitesmoke;
+    padding: 20px;
+    text-align: center;
+    font-size: 8px;
+    font-weight: bold;
+    position: relative; /* Adiciona posição para ajustar a sobreposição */
+    z-index: 1; /* Define uma pilha de ordem  */
+}
+/* Foto do cabeçalho*/
+header img {
+    max-width: 20%; /* Garante que a imagem não ultrapasse a largura do cabeçalho */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 70%; /* Aplica um formato arredondado à imagem */
+}
+/* Barra de navegação */
+nav {
+    background-color: #333;
+    padding: 10px;/* Largura barra de links */
+    text-align: center;
+    position: fixed;/* mantém fixo no topo */
+    top: 0;/* Garante que a barra de navegação esteja acima do cabeçalho */
+    left: 0;
+    width: 100%;
+    z-index: 2; /* Define uma pilha de ordem  */
+}
+/* Estilo para todos os links */
+nav a, #about a {
+    color: green;
+    text-decoration: none;
+    font-weight: bold; /* Texto em negrito */
+}
+nav a:hover {
+    text-decoration: underline;/* Mostra sublinhado ao passar o mouse em cima */
+}
+/* Estilo CSS para o formulário de contato */
+.contato-form {
+    margin-top: 5px; /* margem superior para separar o formulário do cabeçalho Contato*/
+    margin-bottom: 200px; /*margem inferior para separar o formulário do rodapé */
+    padding: 20px; /* Altura cx para preenchimento de dados */ 
+    height: 300px;/* Ajuste plano de fundo */   
+}
+.contato-form textarea,
+.contato-form input[type="text"],
+.contato-form input[type="email"] {
+    width: 30%; /* largura cx de mensagem */
+    margin: 5px 0; /* Margem vertical entre os campos */
+}
+
+/* Ajuste para o rodapé */
+footer {
+    padding: 5px; /* Altura do rodapé */
+    background-color: #333;
+    color: green; /* Cor do texto do rodapé */
+    text-align: center; /* Alinha o texto ao centro */
+    position: fixed; /* Fixa o rodapé na parte inferior da tela */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+/* Estilo CSS para as imagens */
+.imagens {
+    display: flex;
+    align-items: center;
+    justify-content: none; /* Centraliza as imagens horizontal */
+    margin-top: 10px; /* Espaço entre o cabelho saiba mais: */
+    margin-bottom: 50px; /* Adiciona espaço vazio abaixo das imagens */
+}
+.imagens a {
+    margin: 0 20px; /* Espaçamento entre as imagens */
+}
+.imagens img {
+    width: 70px; /* Tamanho das imagens */
+    height: auto;
+}
+
+/* Mídia para dispositivos móveis */
+@media only screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a, #about a {
+        margin: 0 10px; /* Espaçamento entre os links */
+    }
+
+    .contato-form textarea,
+    .contato-form input[type="text"],
+    .contato-form input[type="email"] {
+        width: 90%; /* largura cx de mensagem */
+        margin: 5px auto; /* Margem vertical entre os campos */
+    }
+
+    button {
+        width: 30%; /* largura botão */
+        margin-top: 5px; /* Distância do botão entre a cx de mensagem */
+    }
+
+    section {
+        margin-top: 10px; /* Margem superior para aproximar do cabeçalho */
+    }
+}
+
+/* Mídia para telas de computadores */
+@media only screen and (min-width: 800px) {
+    nav {
+        flex-direction: row; /* Retorna à direção padrão */
+        justify-content: space-between; /* Distribui os links uniformemente */
+    }
+
+    nav a, #about a {
+        margin: 0 100px; /* Espaçamento entre os links */
+    }
+
+    .contato-form textarea,
+    .contato-form input[type="text"],
+    .contato-form input[type="email"] {
+        width: 100%; /* largura cx de mensagem */
+        margin: 20px 0; /* Margem vertical entre os campos */
+    }
+
+    button {
+        width: 10%; /* largura do botão */
+        margin-top: 30px; /* Aumenta mais a distância do botão entre a caixa de mensagem e o rodapé */
+        height: 50px; /* Ajusta a altura do botão */
+        font-size: 16px; /* Diminui o tamanho da fonte do botão */
+    }
+
+    section {
+        margin-top: 10px; /* Margem superior para aproximar do cabeçalho */
+    }
+    
+}

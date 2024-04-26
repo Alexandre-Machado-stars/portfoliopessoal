@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <!-- Estilo da Página -->
+    <link rel="stylesheet" type="text/css" href="stilo.css">
+</head>
+<body>
+    <!-- Cabeçalho seção de contato -->
+    <header>
+        <img src="image/perfil.jpg" alt="foto de perfil">
+        <h1>Dev ARM - Alexandre Ribeiro Machado</h1>
+    </header>
+    <!-- Barra de links -->
+    <nav>
+        <!-- Link para retornar à tela inicial -->
+        <a href="#" onclick="redirectToHomePage()">INÍCIO</a>
+        <!-- Link para abrir a página de contato em uma nova guia -->
+    </nav>
+    
+    <script>
+        function redirectToHomePage() {
+            // Redireciona para a página inicial (index.html)
+            window.location.href = "index.html";
+            // Fecha a guia atual
+            window.close();
+        }
+    </script>
+
+    <section id="contact">
+        <h2>CONTATO</h2>
+        <!-- Formulário da pagina Contatos -->
+        <form class="contato-form" action="https://formsubmit.co/bdb81b4f39b11b200753f6b1d4873294" method="POST">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required><br>
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" rows="4" required></textarea><br>
+            <button type="submit">Enviar</button> <!-- Botão de enviar -->
+            <input type="hidden" name="_next" value="https://alexandre-machado-stars.github.io/portfoliopessoal/obrigado.html"><!-- pagina obrigado -->
+            <input type="hidden" name="_subject" value="Novo contato!"><!-- aparece novo contato -->
+            <input type="hidden" name="_captcha" value="false"><!-- Desabilitar captcha -->
+    </section>
+    <footer>
+        &copy; 2024 Dev ARM - Alexandre Ribeiro Machado 
+    </footer>
+</body>
+</html>
